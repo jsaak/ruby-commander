@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--Generated with glade3 3.4.5 on Thu Oct  8 14:54:09 2009 -->
+<glade-interface>
+  <widget class="GtkWindow" id="window_main">
+    <property name="width_request">880</property>
+    <property name="height_request">660</property>
+    <property name="title" translatable="yes">ruby commander</property>
+    <property name="icon_name">gtk-floppy</property>
+    <signal name="key_press_event" handler="on_key_press"/>
+    <signal name="key_release_event" handler="on_key_release"/>
+    <signal name="delete_event" handler="on_quit"/>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkHPaned" id="hpaned1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="position">440</property>
+            <property name="position_set">True</property>
+            <signal name="accept_position" handler="on_hpaned1_accept_position"/>
+            <signal name="button_press_event" handler="on_hpaned1_button_press_event"/>
+            <signal name="cancel_position" handler="on_hpaned1_cancel_position"/>
+            <child>
+              <widget class="GtkVBox" id="vbox_left">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkHBox" id="hbox1">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImage" id="image_left">
+                        <property name="visible">True</property>
+                        <property name="stock">gtk-missing-image</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="label_left">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="xpad">4</property>
+                        <property name="label" translatable="yes">label</property>
+                        <property name="selectable">True</property>
+                      </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkButton" id="button_left">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="relief">GTK_RELIEF_NONE</property>
+                        <property name="focus_on_click">False</property>
+                        <property name="response_id">0</property>
+                        <signal name="clicked" handler="on_button_left_clicked"/>
+                        <child>
+                          <widget class="GtkArrow" id="arrow1">
+                            <property name="visible">True</property>
+                            <property name="arrow_type">GTK_ARROW_DOWN</property>
+                          </widget>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+              </widget>
+              <packing>
+                <property name="resize">True</property>
+                <property name="shrink">True</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkVBox" id="vbox_right">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkHBox" id="hbox2">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImage" id="image_right">
+                        <property name="visible">True</property>
+                        <property name="stock">gtk-missing-image</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="label_right">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="xpad">4</property>
+                        <property name="label" translatable="yes">label</property>
+                        <property name="selectable">True</property>
+                      </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkButton" id="button_right">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="relief">GTK_RELIEF_NONE</property>
+                        <property name="focus_on_click">False</property>
+                        <property name="response_id">0</property>
+                        <signal name="clicked" handler="on_button_right_clicked"/>
+                        <child>
+                          <widget class="GtkArrow" id="arrow2">
+                            <property name="visible">True</property>
+                            <property name="arrow_type">GTK_ARROW_DOWN</property>
+                          </widget>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+              </widget>
+              <packing>
+                <property name="resize">True</property>
+                <property name="shrink">True</property>
+              </packing>
+            </child>
+          </widget>
+        </child>
+        <child>
+          <widget class="GtkStatusbar" id="statusbar1">
+            <property name="visible">True</property>
+            <property name="spacing">2</property>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>

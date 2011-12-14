@@ -1,0 +1,17 @@
+Source: ruby-commander
+Section: gnome
+Priority: optional
+Maintainer: András Tömpe <andris@napalm.hu>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.7.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: ruby-commander
+Architecture: any
+Depends: ruby, libgtk2-ruby, libgnome2-ruby, libglade2-ruby, libopen4-ruby, mplayer
+Description: commander and mplayer frontend in one using gtk
+ yet another norton commander clone
+ integrated mplayer frontend 
+ using gtk2 and ruby
+ Tag: implemented-in::ruby
+ Depends: ${shlibs:Depends}, ${misc:Depends}

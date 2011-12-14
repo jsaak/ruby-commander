@@ -1,0 +1,25 @@
+#EXTM3U
+#EXTINF:1,afterhoursdjs.org
+http://207.200.96.230:8004
+#EXTINF:1,bartok
+http://stream001.radio.hu:8080/mr3.mp3
+#EXTINF:1,deepmix.ru
+http://deepmix.ru/deepmix128.pls
+#EXTINF:1,di-trance
+http://scfire-dtc-aa07.stream.aol.com:80/stream/1003
+#EXTINF:1,di-vocal-trance
+http://scfire-mtc-aa02.stream.aol.com:80/stream/1065
+#EXTINF:1,di-goa
+http://scfire-ntc-aa03.stream.aol.com:80/stream/1008
+#EXTINF:1,goa.hu-fullon
+http://goa.hu:9000/fullon192.mp3
+#EXTINF:1,goa.hu-prog
+http://goa.hu:9000/progi192.mp3
+#EXTINF:1,groove salad
+http://scfire-chi0l-1.stream.aol.com:80/stream/1018
+#EXTINF:1,la conga
+http://laconga.org/LaCongaRadio/LaCongaPlayer.php?format=RAM
+#EXTINF:1,tilos
+http://yp.tilos.hu/tilos_high.ogg
+#EXTINF:1,töréspont
+http://torespont.hu:8000/listen.pls

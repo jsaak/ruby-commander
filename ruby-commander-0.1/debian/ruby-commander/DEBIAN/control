@@ -1,0 +1,16 @@
+Package: ruby-commander
+Version: 0.1
+Architecture: i386
+Maintainer: jsaak <jsaak@napalm.hu>
+Installed-Size: 128
+Depends: ruby, libgtk2-ruby, libgnome2-ruby, libglade2-ruby, mplayer
+Section: gnome
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: commander and mplayer frontend in one using gtk
+ yet another norton commander clone
+ integrated mplayer frontend
+ using gtk2 and ruby
+ Depends: ruby, libgtk2-ruby, libgnome2-ruby, libglade2-ruby, mplayer
+ Tag: implemented-in::ruby
+ Depends:

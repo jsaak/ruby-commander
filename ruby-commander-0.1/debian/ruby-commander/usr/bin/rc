@@ -1,0 +1,9 @@
+#!/usr/bin/ruby
+
+module Config
+   GladeDir = '/usr/share/ruby-commander/glade/'
+   LibDir = '/usr/lib/ruby/1.8/ruby-commander/'
+end
+
+require Config::LibDir + 'commander'
+App.new.run

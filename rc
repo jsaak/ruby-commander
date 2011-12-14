@@ -1,0 +1,14 @@
+#!/usr/bin/ruby
+
+#module Config
+   #ShareDir = '/usr/share/ruby-commander/'
+   #LibDir = '/usr/lib/ruby/1.8/ruby-commander/'
+#end
+
+module Config
+   ShareDir = ''
+   LibDir = ''
+end
+
+require Config::LibDir + 'commander'
+App.new.run
