@@ -1,0 +1,8 @@
+This is yet another GTK commander
+there are a lot out there no one is perfect for me
+it is unfinished but works
+
+it is an mplayer frontend too, can play music libraries and online radios
+(just copy F5) the directory to the special mplayer pane and press play
+
+it uses FUSE such us sshfs to acces remote filesystems
