@@ -6,9 +6,11 @@
 #end
 
 module Config
-   ShareDir = ''
-   LibDir = ''
+   ShareDir = '/home/jsaak/svn/jsaak/commander/'
+   LibDir = '/home/jsaak/svn/jsaak/commander/'
 end
 
-require Config::LibDir + 'commander'
+$: << Config::LibDir
+require 'commander.rb'
+
 App.new.run

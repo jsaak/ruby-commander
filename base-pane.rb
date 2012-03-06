@@ -1,5 +1,5 @@
 module Selectable
-   def init_selectable(commander, liststore, selected_index, treeview)
+   def init_selectable(liststore, selected_index, treeview)
       @ls = liststore
       @tv = treeview
       @selected_index = selected_index

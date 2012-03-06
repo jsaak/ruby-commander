@@ -275,6 +275,13 @@ class Commander
    def initialize
       Global.instance
 
+      # there is a bug somwhere in the ruby binding libs
+      # probalbly around (xml or glib or cairo)
+      # when a GladieXML file gets garbage collected it produces
+      # [BUG] object allocation during garbage collection phase
+      # so by referencing it we prevent it from gc
+      @prevent_gc_array = Array.new
+
       glade = GladeXML.new(Config::ShareDir+'gui.glade','window_main') {|handler| method(handler)}
       #@select_window = SelectWindow.new(glade)
       @wm = glade.get_widget("window_main")
@@ -290,8 +297,13 @@ class Commander
       @label_left.can_focus = false
       @label_right.can_focus = false
 
-
-      set_pane(:Left, false, LocalPane, ENV['PWD'])
+      if ARGV.size > 0 and File.directory?(ARGV[0])
+         set_pane(:Left, false, LocalPane, ARGV[0])
+      else
+         set_pane(:Left, false, LocalPane, ENV['PWD'])
+      end
+      #set_pane(:Left, false, LocalPane, '/home/jsaak')
+      # set_pane(:Left, false, MPlayerPane)
       set_pane(:Right, false, MPlayerPane)
 
       @tv_background.hide
@@ -364,12 +376,6 @@ class Commander
 
       @op = Operation.new
 
-      # there is a bug somwhere in the ruby binding libs
-      # probalbly around (xml or glib or cairo)
-      # when a GladieXML file gets garbage collected it produces
-      # [BUG] object allocation during garbage collection phase
-      # so by referencing it we prevent it from gc
-      @prevent_gc_array = Array.new
    end
 
    def shelljob(title,description,cmd)
@@ -583,9 +589,9 @@ class Commander
       end
 
       if param.nil?
-         pane = type.new(self)
+         pane = type.new()
       else
-         pane = type.new(self,param)
+         pane = type.new(param)
       end
 
       pane.set_env(label,image)

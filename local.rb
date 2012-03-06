@@ -17,7 +17,7 @@ class LocalPane
    LS_Mdate = 3
    LS_Selected = 4
 
-   def initialize(commander, path = '/')
+   def initialize(path = '/')
       glade = GladeXML.new(Config::ShareDir+'local.glade','vbox3') {|handler| method(handler)}
       @tv_dir = glade['treeview_dir']
       @container_widget = glade['vbox3']
@@ -25,13 +25,12 @@ class LocalPane
       @focus_widget = @tv_dir
 
       @ls_dir = Gtk::ListStore.new(Gdk::Pixbuf,String,String,String,Gdk::Color)
-      p path
       if path[-1..-1] != '/'
          path += '/'
       end
       @current_dir = path
 
-      init_selectable(commander, @ls_dir, LS_Selected, @tv_dir)
+      init_selectable(@ls_dir, LS_Selected, @tv_dir)
       #renderer = Gtk::CellRendererText.new
       #col = Gtk::TreeViewColumn.new('name', renderer, :text => 1)
       #@tv_dir.append_column(col)
@@ -360,10 +359,12 @@ class LocalPane
             #symlink?
             stat = File.lstat(@current_dir+fn)
             if stat.symlink?
+               # TODO make a different icon for symlinks
                begin
-                  stat = File.stat(@current_dir+fn)
+                  path = @current_dir+fn
+                  stat = File.stat(path)
                rescue
-                  puts "invalid symlink: #{@current_dir+fn}"
+                  puts "invalid symlink: #{path}"
                   next
                end
             end

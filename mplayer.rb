@@ -21,7 +21,7 @@ class MPlayerPane
    attr_reader :container_widget
    attr_reader :focus_widget
 
-   def initialize(commander)
+   def initialize()
       glade = GladeXML.new(Config::ShareDir+'mplayer.glade','vbox2') {|handler| method(handler)}
       @container_widget = glade['vbox2']
 
@@ -49,7 +49,7 @@ class MPlayerPane
       @tv_playlist.append_column(col)
 
       @tv_playlist.model = MplayerSingleton.instance.playlist
-      init_selectable(commander, MplayerSingleton.instance.playlist, PL_SELECTED, @tv_playlist)
+      init_selectable(MplayerSingleton.instance.playlist, PL_SELECTED, @tv_playlist)
 
       @hp = glade['hscale_progress']
       @label_mode = glade['label_mode']

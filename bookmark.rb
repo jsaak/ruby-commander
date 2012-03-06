@@ -22,7 +22,7 @@ class BookmarkPane
    attr_reader :container_widget
    attr_reader :focus_widget
 
-   def initialize(commander)
+   def initialize()
       glade = GladeXML.new(Config::ShareDir+'bookmark.glade','vbox3') {|handler| method(handler)}
       @tv_dir = glade['treeview_dir']
       @container_widget = glade['vbox3']
@@ -81,7 +81,7 @@ class BookmarkPane
       @tv_dir.search_column = LS_Name
 
       @tv_dir.model=BookmarkSingleton.instance.ls_bookmark
-      init_selectable(commander,BookmarkSingleton.instance.ls_bookmark,LS_Selected,@tv_dir)
+      init_selectable(BookmarkSingleton.instance.ls_bookmark,LS_Selected,@tv_dir)
 
       glade.get_widget('button_mount').can_focus = false
       glade.get_widget('button_unmount').can_focus = false
