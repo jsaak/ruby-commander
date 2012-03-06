@@ -1,27 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Mon Oct 19 01:23:28 2009 -->
+<?xml version="1.0"?>
 <glade-interface>
+  <!-- interface-requires gtk+ 2.6 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <widget class="GtkWindow" id="window_main">
     <property name="width_request">600</property>
     <property name="height_request">400</property>
     <child>
       <widget class="GtkVBox" id="vbox3">
         <property name="visible">True</property>
+        <property name="orientation">vertical</property>
         <child>
           <widget class="GtkScrolledWindow" id="scrolledwindow1">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
+            <property name="hscrollbar_policy">never</property>
             <child>
               <widget class="GtkTreeView" id="treeview_dir">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="headers_clickable">True</property>
                 <signal name="row_activated" handler="on_treeview_dir_row_activated"/>
               </widget>
             </child>
           </widget>
+          <packing>
+            <property name="position">0</property>
+          </packing>
         </child>
       </widget>
     </child>
